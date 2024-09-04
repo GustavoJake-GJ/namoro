@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    /* background-color: black; */
+    background: linear-gradient(236.85deg, #6A2473 27.26%, #C13F99 96.03%);
+    height: auto;
+    color: #331F40;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: auto;
+
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+h2.titulo {
+    color: #F2B28D;
+    font-size: 26px;
+    font-weight: 600;
+    text-shadow: 0px 0px 18px #0b0111e5;
+    text-align: center;
+}
+
+h2.titulo span {
+    color: #FFDCE4;
+    text-shadow: 0px 0px 18px #f7e5eae5;
+}
+
+/* estilo do cabeçalho */
+header {
+    padding: 40px 4%;
+}
+
+header>.interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+header .logo {
+    background: #201229;
+    border-radius: 23px;
+    font-size: 30px;
+
+    text-align: center;
+    padding: 03px 07px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav.menu-desktop ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+header .contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #331F40;
+    color: #FFDCE4;
+    border-style: none;
+    border-radius: 15px;
+    box-shadow: 5px 4px 6px #34063ab2
+}
+/* estilo cabeçalho mobile */
+
+.mobile{
+    background-color: #201229cb;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999999;
+    width: 75%;
+    visibility: hidden;
+}
+
+.mobile nav ul{
+    text-align: right;
+}
+.mobile nav ul li {
+    color: #FFDCE4;
+    font-size: 21px;
+    padding: 21px 4% ;
+    display: block;
+
+  }
+
+.mobile nav ul li:hover{
+    background-color: #331f4093;
+    box-shadow: 0px 0px 20px #ffdce48e;    
+}
+
+
+ .overlay-menu{
+    background-color: rgba(0, 0, 0, 0.521);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8888;
+    display: none; 
+}
+
+.linha, .linha1 {
+    width: 35px;
+    height: 4px;
+    background-color: #F2B28D;
+    margin: 8px 0;
+    border-radius: 2px;
+    box-shadow: 0px 0px 20px #ffdce4b9;
+    transition: 0.4s;
+}
+.linha1:nth-child(1){
+    transform: translateY(6px) rotate(-45deg);
+}
+.linha1:nth-child(2){
+    transform: translateY(-6px) rotate(45deg);
+}
+.btn-menuf{
+    padding: 20px 5%;
+}
+.btn-menu.ativar .linha:nth-child(1){
+    transform: translateY(36px) rotate(-45deg);
+    width: 0;
+}
+.btn-menu.ativar .linha:nth-child(3){
+    transform: translateY(-36px) rotate(45deg);
+    width: 0;
+}
+.btn-menu.ativar .linha:nth-child(2){
+    width: 0;
+}
+
+
+/* estilo topo */
+section.topo-do-site {
+    padding: 40px 4%;
+}
+
+main .img {
+    max-width: 600px;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    border-radius: 26px;
+    box-shadow: 0px 1px 12px #2012297e;
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+section.topo-do-site .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+
+.topo-do-site h1 {
+    color: #F2B28D;
+    font-size: 39px;
+    font-weight: 700;
+    text-shadow: 0px 0px 18px #0b0111e5;
+    text-align: center;
+}
+
+.topo-do-site p {
+    color: #FFDCE4;
+    text-shadow: 0px 0px 8px #201229e7;
+    text-align: center;
+    text-align: justify;
+}
+
+@keyframes flutuar {
+    0% {
+        top: 0
+    }
+
+    100% {
+        top: 28px;
+    }
+}
+
+main .contador {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #331F40;
+    color: #FFDCE4;
+    border-style: none;
+    border-radius: 15px;
+    box-shadow: 5px 4px 6px #34063ab2;
+    justify-content: center;
+}
+
+/* sobre nós */
+section.sobre-nós {
+    padding: 60px 4%;
+}
+
+section.sobre-nós .flex {
+    gap: 40px;
+}
+
+.sobre-nós .especialidades-box {
+    color: #FFDCE4;
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 20px;
+    transition: .2s;
+
+}
+
+.sobre-nós .especialidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #f7e5ea75;
+}
+
+.sobre-nós .emoji {
+    font-size: 48px;
+    text-shadow: 0px 0px 20px #f7e5eab9;
+}
+
+.sobre-nós .especialidades-box h3 {
+    font-size: 23px;
+    color: #ecb494;
+    text-shadow: 0px 0px 13px #f7e5eacc;
+    margin: 17px 0px;
+}
+
+.sobre-nós .especialidades-box p {
+    text-shadow: 0px 0px 8px #201229e7;
+    text-align: justify;
+}
+
+/* ela */
+section.ela {
+    padding: 40px 5%;
+
+}
+
+main .img-ela {
+    max-width: 650px;
+    max-height: 450px;
+    width: auto;
+    height: auto;
+    border-radius: 26px;
+    box-shadow: 0px 0px 12px #ffdce4b9;
+}
+
+h2.tutu {
+    color: #F2B28D;
+    font-size: 35px;
+    font-weight: 600;
+    text-shadow: 0px 0px 25px #0b0111e5;
+}
+
+section.ela .flex {
+    align-items: center;
+    gap: 50px;
+}
+
+.ela p {
+    color: #FFDCE4;
+    text-shadow: 0px 0px 8px #201229e7;
+    text-align: center;
+    margin-top: 19px;
+    text-align: justify;
+}
+
+.ela .btn-social button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+    background-color: #ecb494;
+    box-shadow: 0px 0px 18px #ffdce496;
+}
+
+
+
+/* simbolo menu
+.container {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 4px;
+    background-color: #F2B28D;
+    margin: 8px 0;
+    border-radius: 2px;
+    box-shadow: 0px 0px 20px #ffdce4b9;
+    transition: 0.4s;
+
+  }
+  
+  .change .bar1 {
+    transform: translate(0, 12.5px) rotate(-45deg);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+ */
+
+
+/* responsivo */
+
+@media screen and (max-width: 880px) {
+
+    /* classe geral */
+    .flex {
+        flex-direction: column;
+    }
+
+    .ela .flex {
+        flex-direction: column-reverse;
+    }
+    /* mobile */
+.mobile.abrir{
+    visibility: visible;
+}
+
+    /* cabeçalho */
+    section.topo-do-site {
+        padding: 5px 4%;
+    }
+
+    .menu-desktop,
+    .contato {
+        display: none;
+    }
+
+    /* topo */
+    section.topo-do-site {
+        padding: 20px 9%;
+    }
+    
+
+    /* sobre */
+    section.sobre-nós .flex {
+        gap: 13px;
+    }
+
+    section.sobre-nós {
+        padding: 60px 6%;
+    }
+
+    /* ela */
+    section.ela {
+        padding: 30px 9.5%;
+
+    }
+    .btn-social{
+        text-align: center;
+    }
+    h2.tutu{
+        text-align: center;
+    }
+
+}
